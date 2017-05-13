@@ -169,8 +169,16 @@ int main(int argc, char* argv[]) {
 
   // compute the accuracy (RMSE)
   Tools tools;
-  cout << "Accuracy - RMSE:" << endl << tools.CalculateRMSE(estimations, ground_truth) << endl;
+  VectorXd rmse = tools.CalculateRMSE(estimations, ground_truth);
+  cout << "Accuracy - RMSE:" << endl << rmse << endl;
 
+#if 0
+  cout << "Passed Rubric: "
+       << (rmse[0] <= .11 && rmse[1] <= .11
+        && rmse[2] <= .52 && rmse[3] <= .52 ? "true" : "false")
+       << endl;
+#endif
+  
   // close files
   if (out_file_.is_open()) {
     out_file_.close();
