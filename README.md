@@ -1,6 +1,43 @@
 # Extended Kalman Filter Project Starter Code
 Self-Driving Car Engineer Nanodegree Program
 
+--- 
+
+The goal of this project is to apply the Extended Kalman Filter to fuse data from LIDAR and Radar sensors. 
+
+
+## Contents
+
+| Folder/File | Description | 
+|:------------|:------------|
+| **src**  | source code for the EKF in C++. |
+| **data** | input datasets. |
+| **data**/obj_pose-laser-radar-synthetic-input.txt | is the new project dataset. The expected RMSE should be less or equal than 0.11, 0.11, 0.52, 0.52.
+| **data**/data-1.txt | Datasets for the older version of the project. The expected RMSE for `data-1.txt` should be less or equal than 0.08, 0.08, 0.60, 0.60. |
+| **data**/data-2.txt | Another dataset from the older version of the project. |
+| **results** | Outputs, logs and visualization images. |
+| **results**/visualization.py | Python script to generate the visualizations. |
+
+## Results
+
+### obj_pose-laser-radar-synthetic-input.txt:
+
+![](results/obj_pose-laser-radar-synthetic.png)
+
+*RMSE*: 0.0972256, 0.0853761, 0.450855, 0.439588 <= 0.11, 0.11, 0.52, 0.52.
+
+### data-1.txt:
+
+![](results/data-1.png)
+
+*RMSE*: 0.0651649, 0.0605378, 0.54319, 0.544191 <=  0.08, 0.08, 0.60, 0.60
+
+### data-2.txt:
+
+![](results/data-2.png)
+
+*RMSE*: 0.185693, 0.190207, 0.474015, 0.824906
+
 ---
 
 ## Dependencies
@@ -55,31 +92,3 @@ cmake and make!
 More information is only accessible by people who are already enrolled in Term 2
 of CarND. If you are enrolled, see [the project resources page](https://classroom.udacity.com/nanodegrees/nd013/parts/40f38239-66b6-46ec-ae68-03afd8a601c8/modules/0949fca6-b379-42af-a919-ee50aa304e6a/lessons/f758c44c-5e40-4e01-93b5-1a82aa4e044f/concepts/382ebfd6-1d55-4487-84a5-b6a5a4ba1e47)
 for instructions and the project rubric.
-
-## Hints!
-
-* You don't have to follow this directory structure, but if you do, your work
-  will span all of the .cpp files here. Keep an eye out for TODOs.
-
-## Call for IDE Profiles Pull Requests
-
-Help your fellow students!
-
-We decided to create Makefiles with cmake to keep this project as platform
-agnostic as possible. Similarly, we omitted IDE profiles in order to we ensure
-that students don't feel pressured to use one IDE or another.
-
-However! We'd love to help people get up and running with their IDEs of choice.
-If you've created a profile for an IDE that you think other students would
-appreciate, we'd love to have you add the requisite profile files and
-instructions to ide_profiles/. For example if you wanted to add a VS Code
-profile, you'd add:
-
-* /ide_profiles/vscode/.vscode
-* /ide_profiles/vscode/README.md
-
-The README should explain what the profile does, how to take advantage of it,
-and how to install it.
-
-Regardless of the IDE used, every submitted project must
-still be compilable with cmake and make.
