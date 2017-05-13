@@ -28,16 +28,17 @@ void KalmanFilter::Update(const VectorXd &z) {
   UpdateResidual(y);
 }
 
-
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
   const double px = x_[0];
   const double py = x_[1];
   const double vx = x_[2];
   const double vy = x_[3];
-  
+
   const double rho = sqrt(px * px + py * py);
   const double phi = atan2(py, px); // [-PI, +PI]
-  const double rho_dot = (px * vx + py * vy) / rho;
+  const double rho_dot = (px * vx + py * vy)
+                      // Avoid dividing by 0
+                       / fmax(rho, 1e-6);
   
   VectorXd z_pred(3);
   z_pred << rho, phi, rho_dot;
