@@ -68,6 +68,10 @@ public:
   void UpdateEKF(const Eigen::VectorXd &z);
   
 private:
+  /**
+   * Updates the state from the residual (measurement - prediction)
+   * @param y The residual at k+1
+   */
   void UpdateResidual(const Eigen::VectorXd &y);
 };
 
