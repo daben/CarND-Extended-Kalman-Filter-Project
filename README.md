@@ -1,9 +1,12 @@
-# Extended Kalman Filter Project Starter Code
+# Extended Kalman Filter Project
+
 Self-Driving Car Engineer Nanodegree Program
 
 --- 
 
 The goal of this project is to apply the Extended Kalman Filter to fuse data from LIDAR and Radar sensors. 
+
+This repository is a fork of the [original project starter code](https://github.com/udacity/CarND-Extended-Kalman-Filter-Project).
 
 
 ## Contents
